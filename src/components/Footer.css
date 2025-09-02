@@ -1,0 +1,80 @@
+:root {
+    /* Footer Theme Colors */
+    --footer-bg: #222;           /* Footer background */
+    --footer-text: #fff;         /* Default text color */
+    --footer-link-hover: #ff4c4c; /* Link hover color */
+    --footer-contact-hover: #28a745; /* Contact link hover color */
+    --footer-bottom-text: #aaa;  /* Bottom text color */
+}
+
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+    width: 100%;            /* full width of viewport */
+    max-width: 100%;        /* prevent overflow */
+    box-sizing: border-box; /* include padding inside width */
+    overflow-x: hidden;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links li a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+    color: var(--footer-link-hover);
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: var(--footer-text);
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: var(--footer-contact-hover);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--footer-bottom-text);
+}
+
+.footer-social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: var(--footer-text);
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--footer-link-hover);
+}

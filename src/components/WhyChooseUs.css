@@ -1,0 +1,106 @@
+:root {
+    --color-bg: #f9f9f9;
+    --color-text: #1a1a1a;
+    --color-card-bg: #fff;
+    --color-card-shadow: rgba(0, 0, 0, 0.1);
+    --color-card-hover-shadow: rgba(0, 100, 200, 0.3);
+    --color-accent: #ff6600;
+}
+
+/* Container */
+.why-container {
+    width: 100%;
+    background: var(--color-bg);
+    color: var(--color-text);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    max-width: 100%;        /* prevent overflow */
+    box-sizing: border-box; /* include padding inside width */
+    overflow: hidden;
+}
+
+/* Heading */
+.why-heading {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+
+/* Cards wrapper */
+.why-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Individual Card */
+.why-card {
+    background: var(--color-card-bg);
+    padding: 30px 20px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px var(--color-card-shadow);
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px var(--color-card-hover-shadow);
+}
+
+/* Icon */
+.why-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--color-accent);
+}
+
+/* Card text */
+.why-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+.why-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Slide animations */
+.slide-down {
+    animation: slideDown 1s forwards;
+}
+
+.slide-up {
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .why-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .why-card {
+        width: 90%;
+    }
+
+    .why-heading {
+        font-size: 2.2rem;
+    }
+}

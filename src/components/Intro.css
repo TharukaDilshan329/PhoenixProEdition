@@ -1,0 +1,117 @@
+/* =========================
+   🎨 Theme Colors (light mode)
+   ========================= */
+:root {
+    --color-bg: #f9f9f9;
+    --color-text: #1a1a1a;
+    --color-accent: #e63946; /* optional accent red */
+}
+
+/* =========================
+   🌍 Container
+   ========================= */
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Poppins', sans-serif;
+    padding: 70px;
+    width: 100%;            /* full width of viewport */
+    max-width: 100%;        /* prevent overflow */
+    box-sizing: border-box; /* include padding inside width */
+    overflow-x: hidden;
+}
+
+/* =========================
+   📦 Content Wrapper
+   ========================= */
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+    gap: 50px;
+}
+
+/* =========================
+   🔠 Left Column
+   ========================= */
+.intro-left {
+    flex: 1;
+}
+
+.intro-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--color-text);
+}
+
+.intro-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+/* =========================
+   🖼️ Right Column
+   ========================= */
+.intro-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+/* =========================
+   🎞️ Animations
+   ========================= */
+.slide-left {
+    animation: slideLeft 1s ease forwards;
+}
+
+.slide-right {
+    animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideLeft {
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* =========================
+   📱 Responsive
+   ========================= */
+@media (max-width: 900px) {
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-title {
+        font-size: 2.5rem;
+    }
+
+    .intro-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}

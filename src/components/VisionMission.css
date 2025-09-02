@@ -1,0 +1,77 @@
+/* ================================
+   Vision & Mission - Template CSS
+   ================================ */
+
+:root {
+    --vm-bg: #f9f9f9; /* light section background */
+    --vm-box-radius: 15px;
+    --vm-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+    /* Text colors */
+    --vm-title-color: #ff6600; /* modern orange accent */
+    --vm-text-color: #333333;  /* dark gray for readability */
+
+    /* Gradient backgrounds (light with subtle orange highlights) */
+    --vm-vision-gradient: linear-gradient(135deg, #ffffff, #fff4e6);
+    --vm-mission-gradient: linear-gradient(135deg, #ffffff, #ffe9d6);
+
+    /* Hover */
+    --vm-hover-shadow: 0 10px 25px rgba(255, 102, 0, 0.25);
+}
+
+/* Section */
+.vision-mission {
+    padding: 60px 20px;
+    background: var(--vm-bg);
+    text-align: center;
+    width: 100%;            /* full width of viewport */
+    max-width: 100%;        /* prevent overflow */
+    box-sizing: border-box; /* include padding inside width */
+    overflow-x: hidden;
+}
+
+/* Container */
+.vm-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Box */
+.vm-box {
+    flex: 1 1 300px;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: var(--vm-box-radius);
+    box-shadow: var(--vm-box-shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.vm-box h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--vm-title-color);
+}
+
+.vm-box p {
+    font-size: 16px;
+    color: var(--vm-text-color);
+    line-height: 1.6;
+}
+
+.vm-box:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--vm-hover-shadow);
+}
+
+/* Vision box */
+.vision {
+    background: var(--vm-vision-gradient);
+}
+
+/* Mission box */
+.mission {
+    background: var(--vm-mission-gradient);
+}

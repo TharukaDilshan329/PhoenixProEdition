@@ -1,0 +1,102 @@
+/* =========================
+   🎨 Theme Colors
+========================= */
+:root {
+    --color-bg: #f9f9f9;                  /* FAQ background */
+    --color-text: #1a1a1a;                /* FAQ text */
+    --color-card-bg: #fff;                 /* FAQ item background */
+    --color-card-border: #ddd;             /* Border of each FAQ item */
+    --color-card-shadow: rgba(0,0,0,0.05); /* Subtle shadow */
+    --color-accent: #ff6600;               /* Highlight / active question */
+}
+
+/* =========================
+   FAQ Container
+========================= */
+.faq-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 20px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    text-align: center;
+    max-width: 100%; /* prevent overflow */
+    box-sizing: border-box; /* include padding inside width */
+    overflow: hidden;
+}
+
+/* Heading */
+.faq-heading {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* FAQ List */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 75%;
+    margin: 0 auto; /* centers the list horizontally */
+}
+
+/* Individual FAQ Item */
+.faq-item {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 12px;
+    padding: 20px 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px var(--color-card-shadow);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 20px var(--color-card-shadow);
+    transform: translateY(-2px);
+}
+
+/* Question */
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Answer */
+.faq-answer {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+/* Active FAQ */
+.faq-item.active .faq-answer {
+    max-height: 500px; /* enough to show content */
+    padding-top: 10px;
+}
+
+.faq-item.active .faq-question {
+    color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-heading {
+        font-size: 2.2rem;
+    }
+    .faq-question {
+        font-size: 1.1rem;
+    }
+    .faq-answer {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,73 @@
+:root {
+    --color-bg: #fffaf5;
+    --color-card: #ffffff;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-accent: #ff6600;
+    --color-text: #222;
+}
+
+/* Section */
+.stats-section {
+    width: 100%;
+    padding: 20px 20px;
+    background: var(--color-bg);
+    max-width: 100%; /* prevent overflow */
+    box-sizing: border-box; /* include padding inside width */
+    overflow-x: hidden;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.stat-card {
+    background: var(--color-card);
+    border-radius: 16px;
+    padding: 30px 40px;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 6px 18px var(--color-shadow);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Icon */
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Number */
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+/* Label */
+.stat-label {
+    font-size: 1rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-container {
+        gap: 30px;
+    }
+    .stat-card {
+        min-width: 180px;
+        padding: 25px 30px;
+    }
+}

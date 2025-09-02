@@ -1,0 +1,151 @@
+/* ======================================
+   Header Theme Colors - edit here only
+====================================== */
+/*:root {
+    --header-bg: #fff;          !* Header background *!
+    --header-border: #ddd;      !* Header bottom border *!
+    --text-color: #333;         !* Navigation text color *!
+    --text-hover: #000;         !* Hover color (optional) *!
+    --cta-bg: #ff6600;          !* Call-to-action button background *!
+    --cta-text: #fff;           !* CTA button text *!
+    --mobile-bg: #fff;          !* Mobile dropdown background *!
+    --mobile-border: #eee;      !* Border between mobile menu links *!
+}*/
+:root {
+    --header-bg: linear-gradient(135deg, #1a0005, #33000f);       /* Fiery red-orange gradient base */
+    --header-border: #e63946;   /* Strong red border for intensity */
+    --text-color: #fffaf0;      /* Soft warm white text */
+    --text-hover: #ffcc00;      /* Golden hover effect */
+    --cta-bg: #3CB371;          /* Bold red CTA button */
+    --cta-text: #ffffff;        /* White text for CTA */
+    --mobile-bg: #ff7043;       /* Warm lighter orange for mobile menu */
+    --mobile-border: #e63946;   /* Red border for separation */
+}
+
+
+
+/* ======================================
+   Header Bar
+====================================== */
+.header {
+    background: linear-gradient(135deg, #1a0005, #33000f);
+    padding: 10px 20px;
+    width: 100%; /* full width of viewport */
+    max-width: 100%; /* prevent overflow */
+    box-sizing: border-box; /* include padding inside width */
+    overflow: hidden;
+
+/*for fix header*/
+    position: fixed;   /* stays at the top while scrolling */
+    top: 0;            /* position at top of viewport */
+    left: 0;           /* align to left edge */
+    z-index: 1000;     /* above other content */
+
+    height: 70px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.header-logo img {
+    max-height: 50px;      /* keeps height within 50px */
+    max-width: 200px;      /* limits width */
+    width: auto;           /* maintain aspect ratio */
+    display: block;        /* remove inline spacing */
+}
+
+.header-logo img {
+    max-height: 50px;  /* maximum height for logo */
+    width: auto;       /* maintain aspect ratio */
+}
+/* ======================================
+   Desktop Navigation
+====================================== */
+.header-nav-desktop {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.header-nav-desktop a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 15px;         /* base size */
+    display: inline-block;    /* for transform */
+    transition: transform 0.2s ease, color 0.2s ease;
+    transform-origin: center; /* scale from center */
+    padding: 0 5px;           /* add horizontal padding to keep spacing consistent */
+}
+
+.header-nav-desktop a:hover {
+    color: var(--text-hover);
+    transform: scale(1.1); /* only visual growth, layout stays */
+}
+
+
+/* Call-to-action button */
+.header-cta {
+    background: var(--cta-bg);
+    color: var(--cta-text);
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ======================================
+   Hamburger / Toggle Button
+====================================== */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ======================================
+   Mobile Dropdown Menu (below header)
+====================================== */
+.header-nav-mobile {
+    display: none;  /* hidden by default */
+    flex-direction: column;
+    width: 100%;
+    background: var(--mobile-bg);
+    border-top: 1px solid var(--mobile-border);
+    z-index: 5;
+}
+
+.header-nav-mobile.open {
+    display: flex; /* show when open */
+}
+
+.header-nav-mobile a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--mobile-border);
+}
+
+/* ======================================
+   Responsive Rules
+====================================== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;   /* show button on mobile */
+    }
+
+    .header-nav-desktop {
+        display: none;    /* hide desktop nav on mobile */
+    }
+}
