@@ -1,5 +1,5 @@
 import React from 'react';
-import FleetPlans from "../components/FleetPlans";
+import FleetPlans from "./components/FleetPlans";
 
 const Services = () => {
     return (

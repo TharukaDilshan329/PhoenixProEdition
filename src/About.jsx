@@ -1,12 +1,12 @@
 import React from 'react';
-import Intro from '../components/Intro';
-import Team from '../components/Team';
-import ownerPhoto1 from '../assets/owner1.jpg';
-import ownerPhoto2 from '../assets/owner2.jpg';
-import employeePhoto1 from '../assets/employee1.jpg';
-import WhyChooseUs from "../components/WhyChooseUs";
-import CustomerFeedback from "../components/CustomerFeedback";
-import StatsCounter from "../components/StatsCounter";
+import Intro from './components/Intro';
+import Team from './components/Team';
+import ownerPhoto1 from './assets/owner1.jpg';
+import ownerPhoto2 from './assets/owner2.jpg';
+import employeePhoto1 from './assets/employee1.jpg';
+import WhyChooseUs from "./components/WhyChooseUs";
+import CustomerFeedback from "./components/CustomerFeedback";
+import StatsCounter from "./components/StatsCounter";
 
 const teamMembers = [
     { name: "Manoj", position: "Owner", photo: ownerPhoto1 },
