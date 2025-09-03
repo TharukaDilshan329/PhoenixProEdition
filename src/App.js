@@ -2,18 +2,12 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import logoImg from './assets/logo.png';
-import Slider from './components/Slider';
 import Footer from './components/Footer';
-import VisionMission from "./components/VisionMission";
 import Services from './Services';
 import Gallery from './Gallery';
 import About from './About';
 import Contact from './Contact';
-import StatsCounter from "./components/StatsCounter";
-import WelcomeNote from "./components/WelcomeNote";
-import slider1 from './assets/slider1.jpg';
-import slider2 from './assets/slider2.jpg';
-import slider3 from './assets/slider3.jpg';
+import Home from "./Home";
 
 const menuItems = [
     { text: 'Home', to: '/' },
@@ -24,16 +18,6 @@ const menuItems = [
 ];
 
 //const cta = { text: 'Book Now', href: '/book' };
-
-// const images = [
-//     './assets/slider1.jpg',
-//     './assets/slider2.jpg',
-//     './assets/slider3.jpg'
-// ];
-const images = [slider1, slider2, slider3];
-
-
-const captions = [];
 
 const navLinks = [
     { title: 'Home', to: '/' },
@@ -66,14 +50,7 @@ function App() {
                     menuItems={menuItems}
                 />
                 <Routes>
-                    <Route path="/" element={
-                        <>
-                            <Slider images={images} captions={captions} autoSlide={true} slideInterval={5000} />
-                            <WelcomeNote/>
-                            <StatsCounter/>
-                            <VisionMission />
-                        </>
-                    } />
+                    <Route path="/" element={<Home/>} />
                     <Route path="/services" element={<Services />} />
                     <Route path="/gallery" element={<Gallery />} />
                     <Route path="/about" element={<About />} />
