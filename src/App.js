@@ -58,7 +58,7 @@ const contact = {
 function App() {
 
     return (
-        <Router /*basename="/PhoenixProEdition"*/> {/* <-- Wrap the whole app in Router */}
+        <Router basename="/PhoenixProEdition"> {/* <-- Wrap the whole app in Router */}
             <div>
                 <Header
                     logo={<img src={logoImg} alt="My Logo" />}
