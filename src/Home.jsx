@@ -14,7 +14,7 @@ const captions = [];
 const Home = () => {
     return (
         <div>
-            <Slider images={images} captions={captions} autoSlide={true} slideInterval={5000} />
+            <Slider images={images} captions={captions} autoSlide={true} slideInterval={6000} />
             <WelcomeNote/>
             <StatsCounter/>
             <VisionMission />
