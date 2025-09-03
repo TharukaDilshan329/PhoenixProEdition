@@ -90,6 +90,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .slider-container {
+        height: 300px;
+    }
     .slider-btn {
         font-size: 2rem;
         padding: 0 10px;

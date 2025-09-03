@@ -26,7 +26,7 @@ export default function Slider({ images = [], captions = [], autoSlide = true, s
         <div className="slider-container">
             {images.map((img, index) => (
                 <div key={index} className={`slider-slide ${index === currentIndex ? 'active' : ''}`}>
-                    <img src={img} alt={captions[index] || `Slide ${index + 1}`} />
+                    <img src={img} alt={captions[index] || `Slide ${index + 1}`} loading="lazy" decoding="async" sizes="100vw" />
                     {captions[index] && <div className="slider-caption"><h2>{captions[index]}</h2></div>}
                 </div>
             ))}
