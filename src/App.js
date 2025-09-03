@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter  as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import logoImg from './assets/logo.png';
 import Slider from './components/Slider';
@@ -16,11 +16,11 @@ import slider2 from './assets/slider2.jpg';
 import slider3 from './assets/slider3.jpg';
 
 const menuItems = [
-    { text: 'Home', href: '/' },
-    { text: 'Services', href: '/PhoenixProEdition/#/services', isPage: true },  // separate page
-    { text: 'Gallery', href: '/PhoenixProEdition/#/gallery', isPage: true },
-    { text: 'About Us', href: '/PhoenixProEdition/#/about', isPage: true },
-    { text: 'Contact Us', href: '/PhoenixProEdition/#/contact', isPage: true },
+    { text: 'Home', to: '/' },
+    { text: 'Services', to: '/services', isPage: true },
+    { text: 'Gallery', to: '/gallery', isPage: true },
+    { text: 'About Us', to: '/about', isPage: true },
+    { text: 'Contact Us', to: '/contact', isPage: true },
 ];
 
 //const cta = { text: 'Book Now', href: '/book' };
@@ -36,11 +36,12 @@ const images = [slider1, slider2, slider3];
 const captions = [];
 
 const navLinks = [
-    { title: 'Home', url: '/' },
-    { title: 'About', url: '/about' },
-    { title: 'Services', url: '/services' },
-    { title: 'Contact', url: '/contact' }
+    { title: 'Home', to: '/' },
+    { title: 'About', to: '/about' },
+    { title: 'Services', to: '/services' },
+    { title: 'Contact', to: '/contact' }
 ];
+
 const socialLinks = {
     facebook: "https://web.facebook.com/pehsara",
     instagram: "https://instagram.com/Phoenix_pro_edition",
