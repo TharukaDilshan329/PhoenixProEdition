@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter  as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter  as Router, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import logoImg from './assets/logo.png';
 import Slider from './components/Slider';
@@ -17,10 +17,10 @@ import slider3 from './assets/slider3.jpg';
 
 const menuItems = [
     { text: 'Home', href: '/' },
-    { text: 'Services', href: '/services', isPage: true },  // separate page
-    { text: 'Gallery', href: '/gallery', isPage: true },
-    { text: 'About Us', href: '/about', isPage: true },
-    { text: 'Contact Us', href: '/contact', isPage: true },
+    { text: 'Services', href: '/PhoenixProEdition/#/services', isPage: true },  // separate page
+    { text: 'Gallery', href: '/PhoenixProEdition/#/gallery', isPage: true },
+    { text: 'About Us', href: '/PhoenixProEdition/#/about', isPage: true },
+    { text: 'Contact Us', href: '/PhoenixProEdition/#/contact', isPage: true },
 ];
 
 //const cta = { text: 'Book Now', href: '/book' };
@@ -58,7 +58,7 @@ const contact = {
 function App() {
 
     return (
-        <Router basename="/PhoenixProEdition"> {/* <-- Wrap the whole app in Router */}
+        <Router /*basename="/PhoenixProEdition"*/> {/* <-- Wrap the whole app in Router */}
             <div>
                 <Header
                     logo={<img src={logoImg} alt="My Logo" />}
