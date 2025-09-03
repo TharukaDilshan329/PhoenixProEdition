@@ -43,14 +43,14 @@ const contact = {
 function App() {
 
     return (
-        <Router /*basename="/PhoenixProEdition"*/> {/* <-- Wrap the whole app in Router */}
+        <Router>
             <div>
                 <Header
                     logo={<img src={logoImg} alt="My Logo" />}
                     menuItems={menuItems}
                 />
                 <Routes>
-                    <Route path="/" element={<Home/>} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/services" element={<Services />} />
                     <Route path="/gallery" element={<Gallery />} />
                     <Route path="/about" element={<About />} />
