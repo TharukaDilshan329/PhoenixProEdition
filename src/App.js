@@ -11,6 +11,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import StatsCounter from "./components/StatsCounter";
 import WelcomeNote from "./components/WelcomeNote";
+import slider1 from './assets/slider1.jpg';
+import slider2 from './assets/slider2.jpg';
+import slider3 from './assets/slider3.jpg';
 
 const menuItems = [
     { text: 'Home', href: '/' },                     // separate page
@@ -22,11 +25,13 @@ const menuItems = [
 
 //const cta = { text: 'Book Now', href: '/book' };
 
-const images = [
-    '/images/slider1.jpg',
-    '/images/slider2.jpg',
-    '/images/slider3.jpg'
-];
+// const images = [
+//     './assets/slider1.jpg',
+//     './assets/slider2.jpg',
+//     './assets/slider3.jpg'
+// ];
+const images = [slider1, slider2, slider3];
+
 
 const captions = [];
 
@@ -53,7 +58,7 @@ const contact = {
 function App() {
 
     return (
-        <Router> {/* <-- Wrap the whole app in Router */}
+        <Router /*basename="/PhoenixProEdition"*/> {/* <-- Wrap the whole app in Router */}
             <div>
                 <Header
                     logo={<img src={logoImg} alt="My Logo" />}
