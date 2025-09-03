@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter  as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter  as Router, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import logoImg from './assets/logo.png';
 import Slider from './components/Slider';
@@ -16,7 +16,7 @@ import slider2 from './assets/slider2.jpg';
 import slider3 from './assets/slider3.jpg';
 
 const menuItems = [
-    { text: 'Home', href: '/' },                     // separate page
+    { text: 'Home', href: '/' },
     { text: 'Services', href: '/services', isPage: true },  // separate page
     { text: 'Gallery', href: '/gallery', isPage: true },
     { text: 'About Us', href: '/about', isPage: true },
@@ -58,7 +58,7 @@ const contact = {
 function App() {
 
     return (
-        <Router /*basename="/PhoenixProEdition"*/> {/* <-- Wrap the whole app in Router */}
+        <Router basename="/PhoenixProEdition"> {/* <-- Wrap the whole app in Router */}
             <div>
                 <Header
                     logo={<img src={logoImg} alt="My Logo" />}
